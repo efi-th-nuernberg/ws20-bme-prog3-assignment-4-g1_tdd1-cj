@@ -34,6 +34,7 @@ public class TriangleCheckerTest {
     }
 
     @Test
+
     public void testNoTriangle2() {
 
         // Arrange
@@ -78,7 +79,7 @@ public class TriangleCheckerTest {
         assertEquals(TriangleChecker.TriangleType.NONE, type);
     }
 
-     @Test
+    @Test
     public void testTriangle2Zero() {
 
         // Arrange
@@ -184,6 +185,22 @@ public class TriangleCheckerTest {
         // Assert
         assertEquals(TriangleChecker.TriangleType.ISOSCELES, type);
     }
+    
+    @Test
+    public void testIsoscelesTriangle() {
+
+        // Arrange
+        float a = 5;
+        float b = 5;
+        float c = 8;
+
+        // Act
+        TriangleChecker.TriangleType type = TriangleChecker.checkTriangle(a, b, c);
+
+        // Assert
+        assertEquals(TriangleChecker.TriangleType.ISOSCELES, type);
+    }
+
     
     @Test
     public void testEquilateralTriangle() { 
